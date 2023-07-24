@@ -3,7 +3,7 @@
 import random
 from faker import Faker
 from datetime import datetime, timedelta
-from cpf_generator import CPF
+from cpf_generator import CPF 
 import csv
 import pandas as pd
 from multiprocessing import Pool
