@@ -32,7 +32,7 @@
 </p>
 
 <p>
-  
+  <li>Como todo o código foi desenvolvido no Colab, pode ser quer se ao tentar executa-lo em seu ambiente, precise reorganiza-lo.</li>
 </p>
 
 </ol>  
