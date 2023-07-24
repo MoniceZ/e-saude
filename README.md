@@ -7,7 +7,7 @@
   
   <li>temp_dataframe: é uma dataset já pronto, para poder verificar o resultador obtido</li>
   
-  <li>dataset.py: é a junção de dos nomes, cpfs, estado civil, pai, mãe, etc mais uma lista de endereços públicos</li>
+  <li>dataset.py: é a junção dos nomes, cpfs, estado civil, pai, mãe, etc mais uma lista de endereços públicos</li>
   
   <li>gerador-dataset: é a primeira versão do código, fucional, porém é necessário utilizar o arquivo "ceps_reais" e do dataset dos endereços prúblicos</li>
   
