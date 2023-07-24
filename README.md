@@ -45,7 +45,7 @@
 <ol>
 <li>Sobrenome1 não pode ser igual ao Sobrenome2</li>
 <li>Sobrenome1 e Sobrenome2 do Filho pode ou não ser igual o do pai ou da mãe, ou simplesmente só um sobrenome ser igual de um dos pais</li>
-<li>Sobrenome1 e Sobrenome2 pode ou não ser iguais entre pai e mãe, podendo ser diferentes tamvém, ou somente um igual</li>
+<li>Sobrenome1 e Sobrenome2 pode ou não ser iguais entre pai e mãe, podendo ser diferentes também, ou somente um igual</li>
 </ol>
 
 <p>Porém, essas limitações que ainda não foram completamente resolvidas</p>
