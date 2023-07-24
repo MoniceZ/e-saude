@@ -17,7 +17,7 @@
 ## Explicações de Particularidades
 
 <ol>
-  <li>No dataset.py, a URL 1, as vezes, o link está quebrando faça o seguinte, quando isso ocorrer:</li>  
+  <li>No dataset.py, a URL 1, as vezes, o link está quebrando, faça o seguinte, quando isso ocorrer:</li>  
 
 <p>Abra o link em um página web, peça para reparar seu download, copie o link do download direto.<br /></p>
 <p>Veja o passo a passo: <br /></p>
