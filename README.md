@@ -70,5 +70,5 @@ O objetivo geral é desenvolver uma solução para a geração e/ou armazenament
 
 <br />
 <p align="right"><b>Orientado por:</b></p>
-<p align="right">Professor Iwens Senehttps://ww2.inf.ufg.br/node/118</p>
+<p align="right">Professor Iwens Sene</p>
 
