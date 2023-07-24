@@ -20,7 +20,7 @@
   <li>No dataset.py, a URL 1, as vezes, o link está quebrando faça o seguinte, quando isso ocorrer:</li>
     Abra o link em um página web, peça para reparar seu download, copie o link do download direto.
 
-    Siga o passo a passo:
+    Siga o passo a passo: <br/>
 
     ![01](https://github.com/MoniceZ/e-saude/assets/113941301/0f4661fc-2e92-4792-906d-5e9ca35654e2)
 
