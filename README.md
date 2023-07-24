@@ -21,5 +21,8 @@
     Abra o link em um página web, peça para reparar seu download, copie o link do download direto.
 
     Siga o passo a passo:
-    https://github.com/MoniceZ/e-saude/issues/1#issue-1818408643
+
+    ![01](https://github.com/MoniceZ/e-saude/assets/113941301/0f4661fc-2e92-4792-906d-5e9ca35654e2)
+
+
 </ol>
