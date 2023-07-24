@@ -63,10 +63,12 @@ O objetivo geral é desenvolver uma solução para a geração e/ou armazenament
 
 ### Sinta-se livre para ajudar, com comentários, códigos, lógicas, etc.
 
-<p align="right"><b>Criado por:</b>b></p>
+<br />
+<p align="right"><b>Criado por:</b></p>
 <p align="right">Fábio Monice</p>
 <p align="right">Eliana Mendes</p>
 
-<p align="right"><b>Orientador por:</b>b></p>
+<br />
+<p align="right"><b>Orientador por:</b></p>
 <p align="right">Professor Iwens Sene</p>
 
