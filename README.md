@@ -18,5 +18,11 @@
 
 <ol>
   <li>No dataset.py, a URL 1, as vezes, o link está quebrando faça o seguinte, quando isso ocorrer:</li>
-    Abra o link em um página web, peça para reparar seu download, copie o link do download direto.
+    Abra o link em um página web, peça para reparar seu download, copie o link do download direto.<br />
+    Veja o passo a passo: <br />    
 </ol>
+
+<p float="left">
+
+ <img src="https://user-images.githubusercontent.com/113941301/255600779-0f4661fc-2e92-4792-906d-5e9ca35654e2.JPG" width="200" />
+
