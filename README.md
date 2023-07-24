@@ -22,7 +22,7 @@
     Veja o passo a passo: <br />    
 </ol>
 
-<p float="left">
+<p float="center">
 
- <img src="https://user-images.githubusercontent.com/113941301/255600779-0f4661fc-2e92-4792-906d-5e9ca35654e2.JPG" width="200" />
+ <img src="https://user-images.githubusercontent.com/113941301/255600779-0f4661fc-2e92-4792-906d-5e9ca35654e2.JPG" width="450" />
 
