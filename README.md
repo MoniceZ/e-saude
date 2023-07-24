@@ -3,7 +3,7 @@
 ## Explicações por item/arquivo:
 
 <ol>
-  <li><img src="https://user-images.githubusercontent.com/113941301/255662747-df74a21e-221c-4b3c-b74e-03a43ac6f731.png" width="25" /><strong> ceps_reias:</strong> é uma lista de ceps para buscar o endereços na API do POSTMON, utilizar no "gerador-de-dados.py</li>
+  <li><img src="https://user-images.githubusercontent.com/113941301/255662747-df74a21e-221c-4b3c-b74e-03a43ac6f731.png" width="15" /><strong> ceps_reias:</strong> é uma lista de ceps para buscar o endereços na API do POSTMON, utilizar no "gerador-de-dados.py</li>
   
   <li><strong>temp_dataframe:</strong> é uma dataset já pronto, para poder verificar o resultador obtido</li>
   
