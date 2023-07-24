@@ -5,13 +5,13 @@
 <ol>
   <li><strong>ceps_reias:</strong> é uma lista de ceps para buscar o endereços na API do POSTMON, utilizar no "gerador-de-dados.py</li>
   
-  <li>temp_dataframe: é uma dataset já pronto, para poder verificar o resultador obtido</li>
+  <li><strong>temp_dataframe:</strong> é uma dataset já pronto, para poder verificar o resultador obtido</li>
   
-  <li>dataset.py: é a junção de duas bases de dados. A primeira contém dados de nomes de pessoas com CPF, estado civil, nome do pai, nome da mãe, etc. A segunda apresenta uma lista de CEPs e a descrição dos endereços correspondentes.</li>
+  <li><strong>dataset.py:</strong> é a junção de duas bases de dados. A primeira contém dados de nomes de pessoas com CPF, estado civil, nome do pai, nome da mãe, etc. A segunda apresenta uma lista de CEPs e a descrição dos endereços correspondentes.</li>
   
-  <li>gerador-dataset: é a primeira versão do código, fucional, porém é necessário utilizar o arquivo "ceps_reais" e da lista dos endereços</li>
+  <li><strong>gerador-dataset:</strong> é a primeira versão do código, fucional, porém é necessário utilizar o arquivo "ceps_reais" e da lista dos endereços</li>
   
-  <li>gerador-de-dados: é mais completo que o gerador de dataset, mesmo assim, é necessário a utilização do arquivo "ceps_reais".</li>
+  <li><strong>gerador-de-dados:</strong> é mais completo que o gerador de dataset, mesmo assim, é necessário a utilização do arquivo "ceps_reais".</li>
 </ol>
 
 ## Explicações de Particularidades
