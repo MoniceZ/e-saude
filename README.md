@@ -34,9 +34,25 @@
 <p>
   <li>Como todo o código foi desenvolvido no Colab, pode ser quer se ao tentar executa-lo em seu ambiente, precise reorganiza-lo.</li>
 </p>
-<li>Quando tenta abri o dataset já pronto, o Excel não suporta a quantidade de dados, ele chega abrir o arquivo, mas se perde algumas linhas.</li>
+<li>Quando tenta abrir o dataset já pronto, o Excel não suporta a quantidade de dados, ele chega abrir o arquivo, mas se perde algumas linhas.</li>
 
-</ol>  
+</ol>
 
+## Limitações
 
+<p>Quando falamos de sobrenomes, é algo complexo, pois levamos em conta o seguintes fatores:</p>
+
+<ol>
+<li>Sobrenome1 não pode ser igual ao Sobrenome2</li>
+<li>Sobrenome1 e Sobrenome2 do Filho pode ou não ser igual o do pai ou da mãe, ou simplets só um sobrenome ser igual de um dos pais</li>
+<li>Sobrenome1 e Sobrenome2 pode ou não ser iguais entre pai e mãe, podendo ser diferentes tamvém, ou somente um igual</li>
+</ol>
+
+<p>Porém, essas limitações que ainda não foram completamente resolvidas</p>
+
+<ul>
+  <li>Ocorreu sobrenome1 = sobrenome2</li>
+  <li>Ocorreu do filho nunca ter sobrenomes dos pais</li>
+  <li>Ocorreu dos sobrenomes do pais sempre ou nunca serem iguais</li>
+</ul>
 
