@@ -3,7 +3,7 @@
 ## Explicações por item/arquivo:
 
 <ol>
-  <li>![Ícone]([caminho/para/o/icon.png](https://www.flaticon.com/br/icone-gratis/excel_732220))<strong>ceps_reias:</strong> é uma lista de ceps para buscar o endereços na API do POSTMON, utilizar no "gerador-de-dados.py</li>
+  <li><strong>ceps_reias:</strong> é uma lista de ceps para buscar o endereços na API do POSTMON, utilizar no "gerador-de-dados.py</li>
   
   <li><strong>temp_dataframe:</strong> é uma dataset já pronto, para poder verificar o resultador obtido</li>
   
