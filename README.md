@@ -65,7 +65,8 @@ O objetivo geral é desenvolver uma solução para a geração e/ou armazenament
 
 <br />
 <p align="right"><b>Criado por:</b></p>
-<p align="right">Fábio Monice</p>
+<p align="right">
+  <a href="https://www.linkedin.com/in/fabiomonice">Fábio Monice</p>
 <p align="right">Eliana Mendes</p>
 
 <br />
