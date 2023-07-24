@@ -13,3 +13,10 @@
   
   <li>gerador-de-dados: é mais completo que o gerador de dataset, mesmo assim, é necessário a utilização do arquivo "ceps_reais".</li>
 </ol>
+
+## Explicações de Particularidades
+
+<ol>
+  <li>No dataset.py, a URL 1, as vezes, o link está quebrando faça o seguinte, quando isso ocorrer:</li>
+    Abra o link em um página web, peça para reparar seu download, copie o link do download direto.
+</ol>
