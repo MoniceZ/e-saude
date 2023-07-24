@@ -5,7 +5,7 @@
 <ol>
   <li>ceps_reias: é uma lista de ceps para buscar o endereços na API do POSTMON, utilizar no "gerador-de-dados.py</li>
   
-  <li>temp_datafrema: é uma dataset já pronto, para poder verificar o resultador obtido</li>
+  <li>temp_dataframe: é uma dataset já pronto, para poder verificar o resultador obtido</li>
   
   <li>dataset: é a junção de dois datasets, um de nomes, cpfs, estado civil, pai, mãe, etc + dataset de um de endereços públicos</li>
   
