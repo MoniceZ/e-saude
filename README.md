@@ -1,4 +1,4 @@
-# E-saude - Gerador de Dados e Dataset
+# E-Saúde - Gerador de Dados e Dataset
 
 ## Explicações por item/arquivo:
 
@@ -17,11 +17,14 @@
 ## Explicações de Particularidades
 
 <ol>
-  <li>No dataset.py, a URL 1, as vezes, o link está quebrando faça o seguinte, quando isso ocorrer:</li>
-    Abra o link em um página web, peça para reparar seu download, copie o link do download direto.<br />
-    Veja o passo a passo: <br />    
+  <li>No dataset.py, a URL 1, as vezes, o link está quebrando faça o seguinte, quando isso ocorrer:</li>  
 </ol>
 
+<p>
+     Abra o link em um página web, peça para reparar seu download, copie o link do download direto.<br />
+     Veja o passo a passo: <br />
+</p>
+     
 <p float="center">
 
  <img src="https://user-images.githubusercontent.com/113941301/255600779-0f4661fc-2e92-4792-906d-5e9ca35654e2.JPG" width="450" />
