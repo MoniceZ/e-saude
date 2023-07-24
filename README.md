@@ -7,7 +7,7 @@
   
   <li>temp_dataframe: é uma dataset já pronto, para poder verificar o resultador obtido</li>
   
-  <li>dataset.py: é a junção de duas bases de dados. A primeira contém nomes, cpfs, estado civil, pai, mãe, etc. A segunda apresenta uma lista de CEPs e a descrição dos endereços correspondentes.</li>
+  <li>dataset.py: é a junção de duas bases de dados. A primeira contém dados de nomes de pessoas com CPF, estado civil, nome do pai, nome da mãe, etc. A segunda apresenta uma lista de CEPs e a descrição dos endereços correspondentes.</li>
   
   <li>gerador-dataset: é a primeira versão do código, fucional, porém é necessário utilizar o arquivo "ceps_reais" e da lista dos endereços</li>
   
@@ -70,5 +70,5 @@ O objetivo geral é desenvolver uma solução para a geração e/ou armazenament
 
 <br />
 <p align="right"><b>Orientado por:</b></p>
-<p align="right">[Professor Iwens Sene](https://ww2.inf.ufg.br/node/118)</p>
+<p align="right">Professor Iwens Senehttps://ww2.inf.ufg.br/node/118</p>
 
