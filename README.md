@@ -44,7 +44,7 @@
 
 <ol>
 <li>Sobrenome1 não pode ser igual ao Sobrenome2</li>
-<li>Sobrenome1 e Sobrenome2 do Filho pode ou não ser igual o do pai ou da mãe, ou simplets só um sobrenome ser igual de um dos pais</li>
+<li>Sobrenome1 e Sobrenome2 do Filho pode ou não ser igual o do pai ou da mãe, ou simplesmente só um sobrenome ser igual de um dos pais</li>
 <li>Sobrenome1 e Sobrenome2 pode ou não ser iguais entre pai e mãe, podendo ser diferentes tamvém, ou somente um igual</li>
 </ol>
 
@@ -56,3 +56,9 @@
   <li>Ocorreu dos sobrenomes do pais sempre ou nunca serem iguais</li>
 </ul>
 
+## Objetivo desse trabalho
+<p>
+O objetivo geral é desenvolver uma solução para a geração e/ou armazenamento de dados demográficos para teste em sistema de informação. Esta solução visa fornecer informações precisas sobre pacientes, incluindo gênero, idade, endereço e outras características.
+</p>
+
+### Sinta-se livre para ajudar, com comentários, códigos, lógicas, etc.
