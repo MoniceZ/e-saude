@@ -69,6 +69,6 @@ O objetivo geral é desenvolver uma solução para a geração e/ou armazenament
 <p align="right">Eliana Mendes</p>
 
 <br />
-<p align="right"><b>Orientador por:</b></p>
+<p align="right"><b>Orientado por:</b></p>
 <p align="right">Professor Iwens Sene</p>
 
