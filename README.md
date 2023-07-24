@@ -34,6 +34,9 @@
 <p>
   <li>Como todo o código foi desenvolvido no Colab, pode ser quer se ao tentar executa-lo em seu ambiente, precise reorganiza-lo.</li>
 </p>
+<li>Quando tenta abri o dataset já pronto, o Excel não suporta a quantidade de dados, ele chega abrir o arquivo, mas se perde algumas linhas.</li>
 
 </ol>  
+
+
 
