@@ -14,7 +14,7 @@
 <p>
   <li>Como todo o código foi desenvolvido no Colab, pode ser quer se ao tentar executa-lo em seu ambiente, precise reorganiza-lo.</li>
 </p>
-<li>O dataset de endereços é obito pelo "https://elasticnes.saude.gov.br", o que limite a quantidade, porém válida ser dados públicos. </li>
+<li>O dataset de endereços é obito pelo "https://elasticnes.saude.gov.br", o que limita a quantidade, porém válida serem dados públicos. </li>
 
 </ol>
 
