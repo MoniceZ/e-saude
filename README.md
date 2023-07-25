@@ -23,7 +23,7 @@
 O objetivo geral é desenvolver uma solução para a geração e/ou armazenamento de dados demográficos para teste em sistema de informação. Esta solução visa fornecer informações precisas sobre pacientes, incluindo gênero, idade, endereço e outras características.
 </p>
 
-### Sinta-se livre para ajudar, com comentários, códigos, lógicas, etc.
+### Sinta-se livre para ajudar com comentários, códigos, lógicas, etc.
 
 <br />
 <p align="right"><b>Criado por:</b></p>
