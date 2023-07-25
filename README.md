@@ -3,7 +3,7 @@
 ## Explicações por item/arquivo:
 
 <ol>
- <li><img src="https://user-images.githubusercontent.com/113941301/255664380-3e5d435e-7581-4fbf-923c-2ea451151036.png" width="15" /><strong> temp_dataframe:</strong> é uma dataset já pronto, para poder verificar o resultador obtido</li>
+ <li><img src="https://user-images.githubusercontent.com/113941301/255905928-54439a1c-4fd8-4ce8-8ff3-2cf98d3f11d7.png" width="15" /><strong> requirements:</strong> é lista de bibliotecas usadas no projetos e no Colab.</li>
   
  <li><img src="https://user-images.githubusercontent.com/113941301/255664814-a85bc430-2cb8-4014-a835-eb40367ea459.png" width="15" /><strong> gerador_de_dados:</strong> gera dados de pessoas, como nomes, CPFs, RG, Estado Civil, nome do pai, nome da mãe, etc. </li>
 </ol>
