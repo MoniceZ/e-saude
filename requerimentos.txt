@@ -1,12 +1,10 @@
 !pip install faker
 !pip install cpf-generator
-import random
+
 from faker import Faker
-from datetime import datetime, timedelta
+import random
 import pandas as pd
-from multiprocessing import Pool
+from datetime import datetime, timedelta
+import csv
 import numpy as np
-from faker.providers.person.pt_BR import Provider as PtBrProvider
-from faker.providers.date_time.pt_BR import Provider as PtBrDateTimeProvider
-from faker.providers.internet import Provider as InternetProvider
-from faker.providers.ssn.pt_BR import Provider as PtBrSsnProvider
+from multiprocessing import Pool
