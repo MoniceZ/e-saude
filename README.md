@@ -3,9 +3,7 @@
 ## Explicações por item/arquivo:
 
 <ol>
-  <li><img src="https://user-images.githubusercontent.com/113941301/255662747-df74a21e-221c-4b3c-b74e-03a43ac6f731.png" width="15" /><strong> ceps_reias:</strong> é uma lista de ceps para buscar os endereços na API do POSTMON, utilizar no "gerador-de-dados.py</li>
-  
-  <li><img src="https://user-images.githubusercontent.com/113941301/255664380-3e5d435e-7581-4fbf-923c-2ea451151036.png" width="15" /><strong> temp_dataframe:</strong> é uma dataset já pronto, para poder verificar o resultador obtido</li>
+ <li><img src="https://user-images.githubusercontent.com/113941301/255664380-3e5d435e-7581-4fbf-923c-2ea451151036.png" width="15" /><strong> temp_dataframe:</strong> é uma dataset já pronto, para poder verificar o resultador obtido</li>
   
   <li><img src="https://user-images.githubusercontent.com/113941301/255664814-a85bc430-2cb8-4014-a835-eb40367ea459.png" width="15" /><strong> dataset.py:</strong> é a junção de duas bases de dados. A primeira contém dados de nomes de pessoas com CPF, estado civil, nome do pai, nome da mãe, etc. A segunda apresenta uma lista de CEPs e a descrição dos endereços correspondentes. </li>
   
