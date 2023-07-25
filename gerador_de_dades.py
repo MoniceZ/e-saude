@@ -1,10 +1,3 @@
-quantidade_geral_de_dados_real = 5000  #Recomendado até 5000
-#Testado e Aprovado até 5.000/vez
-
-quantide_geral_de_processos_real = 50 #Recomendado até 50
-#Ajuda a otimizar o tempo para geração dos dados, não aumente muito, pode "quebrar" o desempenho real.
-
-
 fake = Faker(['pt_BR'])
 
 def gerar_genero():
@@ -31,9 +24,13 @@ def gerar_sobrenomes_raros(quantidade):
 
 def gerar_sobrenomes_filho(sobrenomes_pai, sobrenomes_mae):
     sobrenome1_filho = random.choice(sobrenomes_pai + sobrenomes_mae)
-    sobrenome2_filho = random.choice([s for s in sobrenomes_pai + sobrenomes_mae if s != sobrenome1_filho])
-    while sobrenome2_filho == sobrenome1_filho:  # Garante que sobrenome2 seja diferente de sobrenome1
-        sobrenome2_filho = random.choice([s for s in sobrenomes_pai + sobrenomes_mae if s != sobrenome1_filho])
+    available_sobrenomes = [s for s in sobrenomes_pai + sobrenomes_mae if s != sobrenome1_filho]
+    
+    if available_sobrenomes:
+        sobrenome2_filho = random.choice(available_sobrenomes)
+    else:
+        sobrenome2_filho = ""
+    
     return sobrenome1_filho, sobrenome2_filho
 
 def gerar_nome_pai(sobrenomes_raros, data_nascimento_filho):
@@ -77,27 +74,24 @@ def gerar_nome_filho(nome_pai, nome_mae, sobrenomes_raros, genero):
     sobrenomes_pai = nome_pai[1]
     sobrenomes_mae = nome_mae[1]
 
-    # Se os sobrenomes do pai e da mãe estiverem vazios, deixamos os sobrenomes do filho vazios também
     if not sobrenomes_pai and not sobrenomes_mae:
         return f"{nome_filho}", "", ""
 
-    # Se algum dos sobrenomes do pai ou da mãe estiver vazio, usamos apenas o outro sobrenome
     if not sobrenomes_pai or not sobrenomes_mae:
         sobrenome1_filho = sobrenomes_pai[0] if sobrenomes_pai else sobrenomes_mae[0]
         sobrenome2_filho = ""
     else:
-        # Usamos um sobrenome aleatório do pai e outro sobrenome aleatório da mãe
         sobrenome1_filho, sobrenome2_filho = gerar_sobrenomes_filho(sobrenomes_pai, sobrenomes_mae)
 
     return f"{nome_filho}", sobrenome1_filho, sobrenome2_filho
 
 def gerar_rg():
-    rg = str(fake.random_number(digits=7)).zfill(7)  # Garante que o RG tenha sempre 7 dígitos
+    rg = str(fake.random_number(digits=7)).zfill(7)
     return f"{rg}"
 
 def format_cpf(cpf):
     cpf_str = str(cpf).zfill(11)
-    return f"{cpf_str[:3]}.{cpf_str[3:6]}.{cpf_str[6:9]}-{cpf_str[9:]}"  # Formatar o CPF
+    return f"{cpf_str[:3]}.{cpf_str[3:6]}.{cpf_str[6:9]}-{cpf_str[9:]}"
 
 def gerar_registro(_):
     genero = gerar_genero()
@@ -111,24 +105,23 @@ def gerar_registro(_):
     data_nascimento_filho = gerar_data_nascimento_filho(nome_pai[2], nome_mae[2])
     nome_filho, sobrenome1_filho, sobrenome2_filho = gerar_nome_filho(nome_pai, nome_mae, sobrenomes_raros, genero)
 
-    # Correção: Verificar a idade do filho(a) e ajustar o estado civil
     idade_filho = (datetime.now().date() - data_nascimento_filho).days // 365
     estado_civil_probabilidades = ('Solteiro(a)', 'Casado(a)', 'Divorciado(a)', 'Viúvo(a)')
     if idade_filho < 18:
-        estado_civil_chances = [100, 0, 0, 0]  # 100% de chance de ser solteiro(a)
+        estado_civil_chances = [100, 0, 0, 0]
     else:
         estado_civil_chances = [42.8, 45.8, 6, 5.4]
 
     estado_civil_filho = np.random.choice(estado_civil_probabilidades, p=(estado_civil_chances / np.sum(estado_civil_chances)))
 
     cpf_filho = fake.random_number(digits=11)
-    cpf_filho_formatado = format_cpf(cpf_filho)  # Formatar o CPF
+    cpf_filho_formatado = format_cpf(cpf_filho)
 
     return {
         'Nome do Filho(a)': f"{nome_filho} {sobrenome1_filho} {sobrenome2_filho}",
         'Gênero': genero,
         'RG': rg_filho,
-        'CPF': cpf_filho_formatado,  # Usar o CPF formatado
+        'CPF': cpf_filho_formatado,
         'Data de Nascimento Filho(a)': data_nascimento_filho.strftime('%d/%m/%Y'),
         'Estado Civil': estado_civil_filho,
         'Pai': f"{nome_pai[0]} {' '.join(nome_pai[1])}",
@@ -138,13 +131,13 @@ def gerar_registro(_):
     }
 
 if __name__ == '__main__':
-    quantidade_geral_de_dados = quantidade_geral_de_dados_real  # Número de registros que você deseja gerar
-    quantidade_geral_de_processos = quantide_geral_de_processos_real  # Número de processos para o multiprocessing
+    quantidade_geral_de_dados_real = 395306
+    quantidade_geral_de_processos_real = 50
 
     sobrenomes_raros = gerar_sobrenomes_raros(50)
 
-    with Pool(processes=quantidade_geral_de_processos) as pool:
-        registros = pool.map(gerar_registro, range(quantidade_geral_de_dados))
+    with Pool(processes=quantidade_geral_de_processos_real) as pool:
+        registros = pool.map(gerar_registro, range(quantidade_geral_de_dados_real))
 
     pool.close()
     pool.join()
@@ -158,4 +151,4 @@ if __name__ == '__main__':
             registro['RG'] = str(registro['RG']).zfill(7)
             writer.writerow(registro)
 
-    print(f'{quantidade_geral_de_dados} registros foram gerados e exportados para {nome_arquivo}.')
+    print(f'{quantidade_geral_de_dados_real} registros foram gerados e exportados para {nome_arquivo}.')
