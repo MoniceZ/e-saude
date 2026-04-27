@@ -359,6 +359,8 @@
   Caso utilize a licença MIT, recomenda-se criar um arquivo separado chamado <strong>LICENSE</strong> na raiz do repositório contendo o texto completo da licença.
 </p>
 
+---
+
 ## Declaração de Finalidade
 
 <p>
