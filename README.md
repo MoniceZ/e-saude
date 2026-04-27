@@ -229,5 +229,207 @@
   </li>
 </ol>
 
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+<pre><code>git clone https://github.com/seu-usuario/seu-repositorio.git</code></pre>
+
+<ol start="2">
+  <li>
+    Acesse a pasta do projeto:
+  </li>
+</ol>
+
+<pre><code>cd seu-repositorio</code></pre>
+
+<ol start="3">
+  <li>
+    Instale as dependências:
+  </li>
+</ol>
+
+<pre><code>pip install -r requerimentos.txt</code></pre>
+
+<ol start="4">
+  <li>
+    Execute o arquivo principal responsável pela geração dos dados.
+  </li>
+</ol>
+
+<p>
+  <strong>Observação:</strong> dependendo da organização atual dos arquivos, pode ser necessário ajustar caminhos, nomes de arquivos e dependências.
+</p>
+
+---
+
+## Limitações
+
+<ol>
+  <li>O projeto foi desenvolvido para fins acadêmicos e de estudo.</li>
+  <li>Não foi projetado para uso em ambiente de produção.</li>
+  <li>Pode exigir ajustes para execução fora do Google Colab.</li>
+  <li>A disponibilidade dos dados de endereço depende da fonte pública utilizada.</li>
+  <li>Os dados gerados são sintéticos e não representam pessoas reais.</li>
+  <li>O projeto pode precisar de refatoração para seguir padrões profissionais de empacotamento Python.</li>
+  <li>Não há garantia de compatibilidade com todas as versões futuras das bibliotecas utilizadas.</li>
+</ol>
+
+---
+
+## Privacidade e Uso de Dados
+
+<p>
+  Este projeto tem como princípio evitar o uso de dados pessoais reais. As informações geradas são sintéticas e utilizadas apenas para compor uma base de testes.
+</p>
+
+<p>
+  Mesmo assim, recomenda-se cautela ao utilizar, adaptar ou expandir este projeto, especialmente em contextos que envolvam saúde, dados pessoais ou informações sensíveis.
+</p>
+
+<p>
+  Caso o projeto seja adaptado para ambientes reais, é necessário avaliar requisitos legais, técnicos e de segurança, incluindo normas de proteção de dados aplicáveis.
+</p>
+
+---
+
+## Aviso sobre LGPD
+
+<p>
+  Este projeto não utiliza dados pessoais reais gerados a partir de pacientes ou usuários identificáveis. O objetivo é justamente permitir estudos e testes utilizando dados sintéticos.
+</p>
+
+<p>
+  Ainda assim, qualquer adaptação que envolva dados reais deve observar a <strong>Lei Geral de Proteção de Dados Pessoais - LGPD</strong> e demais normas aplicáveis.
+</p>
+
+<p>
+  O uso deste projeto não substitui avaliações jurídicas, técnicas ou de segurança da informação em ambientes reais.
+</p>
+
+---
+
+## Melhorias Futuras
+
+<ol>
+  <li>Refatorar o projeto para uma estrutura Python mais modular.</li>
+  <li>Separar funções de geração de dados em arquivos específicos.</li>
+  <li>Criar documentação técnica das funções.</li>
+  <li>Adicionar testes automatizados.</li>
+  <li>Permitir configuração da quantidade de registros gerados.</li>
+  <li>Permitir exportação em diferentes formatos, como CSV, JSON e Excel.</li>
+  <li>Adicionar opção de geração de dados por estado, cidade ou região.</li>
+  <li>Melhorar o tratamento de erros na coleta de dados públicos.</li>
+  <li>Criar interface simples para geração dos datasets.</li>
+  <li>Adicionar exemplos de uso no README.</li>
+</ol>
+
+---
+
+## Contribuições
+
+<p>
+  Sinta-se livre para contribuir com comentários, códigos, lógicas, melhorias, correções e sugestões.
+</p>
+
+<p>
+  Algumas formas de contribuição incluem:
+</p>
+
+<ol>
+  <li>Melhorias na organização do código.</li>
+  <li>Correção de bugs.</li>
+  <li>Refatoração das funções existentes.</li>
+  <li>Melhoria na documentação.</li>
+  <li>Criação de testes.</li>
+  <li>Novas formas de geração de dados sintéticos.</li>
+  <li>Melhorias na exportação dos datasets.</li>
+  <li>Adaptação para execução fora do Google Colab.</li>
+</ol>
+
+---
+
+## Licença
+
+<p>
+  Este projeto pode ser utilizado para fins acadêmicos, educacionais e de estudo.
+</p>
+
+<p>
+  Recomenda-se utilizar uma licença aberta, como a <strong>MIT License</strong>, caso o objetivo seja permitir que outras pessoas usem, modifiquem e contribuam com o projeto.
+</p>
+
+<p>
+  Caso utilize a licença MIT, recomenda-se criar um arquivo separado chamado <strong>LICENSE</strong> na raiz do repositório contendo o texto completo da licença.
+</p>
+
+---
+
+## Sugestão de arquivo LICENSE
+
+<pre><code>MIT License
+
+Copyright (c) 2025 Fábio Monice
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files, to deal in the Software
+without restriction, including without limitation the rights to use, copy,
+modify, merge, publish, distribute, sublicense, and/or sell copies of the
+Software, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</code></pre>
+
+---
+
+## Declaração de Finalidade
+
+<p>
+  Este repositório tem finalidade exclusivamente acadêmica e educacional. Ele foi desenvolvido como parte de um projeto de conclusão de curso e tem como objetivo demonstrar uma solução para geração de dados sintéticos voltados a testes de sistemas de informação.
+</p>
+
+<p>
+  O projeto não possui finalidade comercial, não deve ser utilizado como ferramenta oficial de geração de dados clínicos e não substitui soluções especializadas de anonimização, pseudonimização ou governança de dados.
+</p>
+
+---
+
+## Autores
+
+<br />
+
+<p align="right"><b>Criado por:</b></p>
+
+<p align="right">
+  <a href="https://www.linkedin.com/in/fabiomonice">Fábio Monice</a> 
+  <br />
+  MONICE, F. J. C.
+</p>
+
+<p align="right">
+  Eliana Mendes
+</p>
+
+<br />
+
+<p align="right"><b>Orientado por:</b></p>
+
+<p align="right">
+  <a href="https://ww2.inf.ufg.br/node/118">Professor Iwens Sene</a>
+</p>
+
+---
+
+## Observação Final
+
+<p>
+  Este projeto representa uma etapa de aprendizado e aplicação prática de conceitos relacionados a desenvolvimento, banco de dados, Big Data e geração de datasets sintéticos.
+</p>
+
+<p>
+  Melhorias, comentários e sugestões são bem-vindos.
+</p>
