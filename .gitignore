@@ -1,0 +1,32 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Saidas geradas
+registros.csv
+output/
+data/generated/
+
+# Arquivos locais
+.env
+.env.*
+*.log
+
+# IDEs
+.idea/
+.vscode/
+
+# Sistemas operacionais
+Thumbs.db
+.DS_Store
