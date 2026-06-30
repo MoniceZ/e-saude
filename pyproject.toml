@@ -6,10 +6,12 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "Faker>=25.0,<40.0",
+    "customtkinter>=5.2,<6.0",
 ]
 
 [project.scripts]
 e-saude = "e_saude.cli:main"
+e-saude-gui = "e_saude.gui:run"
 
 [tool.ruff]
 line-length = 100

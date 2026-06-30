@@ -4,6 +4,22 @@ Projeto acadêmico para gerar datasets sintéticos de pessoas/pacientes, com dad
 
 > Importante: todos os dados pessoais gerados são sintéticos e devem ser usados apenas para fins educacionais, testes e estudos.
 
+## Interface gráfica
+
+A aplicação possui uma interface em `customtkinter` para escolher os mesmos parâmetros disponíveis na linha de comando.
+
+```bash
+python main.py
+```
+
+Na interface é possível:
+
+- Definir quantidade de registros.
+- Escolher arquivo de saída.
+- Usar endereço vazio, endereço sintético com Faker ou CSV/ZIP/cache local.
+- Informar seed para resultados reprodutíveis.
+- Baixar cache de endereços públicos do ElastiCNES por limite, UF e competência.
+
 ## O que o projeto gera
 
 O CSV final segue o schema observado no `temp_dataframe.zip`:
@@ -32,6 +48,7 @@ e_saude/
   elasticnes.py   # Download/cache de endereços públicos do ElastiCNES
   exporters.py    # Escrita do CSV
   generator.py    # Orquestração dos registros
+  gui.py          # Interface gráfica customtkinter
   people.py       # Geração de pessoas, documentos e família
   schema.py       # Ordem oficial das colunas
 main.py            # Entrada principal da aplicação
@@ -49,13 +66,9 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-## Como executar
+## Linha de comando
 
-Gerar 1.000 registros sem endereços:
-
-```bash
-python main.py
-```
+A CLI continua disponível quando `main.py` recebe argumentos.
 
 Gerar uma quantidade específica:
 
@@ -124,16 +137,6 @@ LOGRADOURO;NUMERO;COMPLEMENTO;BAIRRO;MUNICIPIO;UF;CEP
 ```
 
 Se nenhum arquivo de endereços for informado, os campos de endereço continuam no CSV, mas ficam vazios. Isso preserva o schema final e facilita integrações.
-
-## Principais melhorias da organização
-
-- Separação do código em módulos pequenos e reutilizáveis.
-- CLI com argumentos para quantidade, saída, endereços e seed.
-- Comando específico para baixar/cachear endereços públicos do ElastiCNES.
-- Escrita em streaming, sem guardar todos os registros em memória.
-- `requirements.txt` válido para instalação local.
-- `pyproject.toml` com metadados do pacote e comando `e-saude` para instalação futura.
-- `.gitignore` para evitar versionar ambientes virtuais, caches e CSVs gerados.
 
 ## Privacidade e LGPD
 

@@ -1,7 +1,16 @@
-﻿"""Entrada principal da aplicacao."""
+﻿"""Entrada principal da aplicação."""
 
-from e_saude.cli import main
+from __future__ import annotations
+
+import sys
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    if len(sys.argv) == 1:
+        from e_saude.gui import run
+
+        run()
+    else:
+        from e_saude.cli import main
+
+        raise SystemExit(main())
