@@ -1,39 +1,39 @@
-﻿# E-Saude - Gerador de Dados Sinteticos
+﻿# E-Saúde - Gerador de Dados Sintéticos
 
-Projeto academico para gerar datasets sinteticos de pessoas/pacientes, com dados cadastrais, familiares, documentos ficticios e enderecos opcionais. A proposta e apoiar testes, validacoes, estudos de banco de dados e simulacoes sem expor dados pessoais reais.
+Projeto acadêmico para gerar datasets sintéticos de pessoas/pacientes, com dados cadastrais, familiares, documentos fictícios e endereços opcionais. A proposta é apoiar testes, validações, estudos de banco de dados e simulações sem expor dados pessoais reais.
 
-> Importante: todos os dados pessoais gerados sao sinteticos e devem ser usados apenas para fins educacionais, testes e estudos.
+> Importante: todos os dados pessoais gerados são sintéticos e devem ser usados apenas para fins educacionais, testes e estudos.
 
 ## O que o projeto gera
 
 O CSV final segue o schema observado no `temp_dataframe.zip`:
 
-| Campo | Descricao |
+| Campo | Descrição |
 | --- | --- |
-| Nome do Filho(a) | Nome completo sintetico |
-| Genero | Masculino ou Feminino |
-| RG | Documento ficticio com 7 digitos |
-| CPF | CPF ficticio formatado |
+| Nome do Filho(a) | Nome completo sintético |
+| Gênero | Masculino ou Feminino |
+| RG | Documento fictício com 7 dígitos |
+| CPF | CPF fictício formatado |
 | Data de Nascimento Filho(a) | Data no formato `dd/mm/aaaa` |
 | Estado Civil | Estado civil simulado conforme idade |
-| Pai | Nome sintetico do pai |
+| Pai | Nome sintético do pai |
 | Data de Nascimento Pai | Data no formato `dd/mm/aaaa` |
-| Mae | Nome sintetico da mae |
-| Data de Nascimento Mae | Data no formato `dd/mm/aaaa` |
-| LOGRADOURO, NUMERO, COMPLEMENTO, BAIRRO, MUNICIPIO, UF, CEP | Campos de endereco, quando uma base de enderecos e informada |
+| Mãe | Nome sintético da mãe |
+| Data de Nascimento Mãe | Data no formato `dd/mm/aaaa` |
+| LOGRADOURO, NUMERO, COMPLEMENTO, BAIRRO, MUNICIPIO, UF, CEP | Campos de endereço, quando uma base de endereços é informada |
 
 ## Estrutura
 
 ```text
 e_saude/
-  addresses.py    # Leitura de enderecos de CSV ou ZIP
+  addresses.py    # Leitura de endereços de CSV ou ZIP
   cli.py          # Interface de linha de comando
-  config.py       # Configuracoes da geracao
+  config.py       # Configurações da geração
   exporters.py    # Escrita do CSV
-  generator.py    # Orquestracao dos registros
-  people.py       # Geracao de pessoas, documentos e familia
+  generator.py    # Orquestração dos registros
+  people.py       # Geração de pessoas, documentos e família
   schema.py       # Ordem oficial das colunas
-gerador_de_dados.py  # Entrada legada compatível com o projeto antigo
+main.py            # Entrada principal da aplicação
 requirements.txt
 requerimentos.txt
 pyproject.toml
@@ -49,67 +49,67 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-O arquivo `requerimentos.txt` foi mantido por compatibilidade, mas agora tambem contem apenas dependencias instalaveis pelo `pip`.
+O arquivo `requerimentos.txt` foi mantido por compatibilidade, mas agora também contém apenas dependências instaláveis pelo `pip`.
 
 ## Como executar
 
-Gerar 1.000 registros sem enderecos:
+Gerar 1.000 registros sem endereços:
 
 ```bash
-python gerador_de_dados.py
+python main.py
 ```
 
-Gerar uma quantidade especifica:
+Gerar uma quantidade específica:
 
 ```bash
-python gerador_de_dados.py --quantity 10000 --output output/registros.csv
+python main.py --quantity 10000 --output output/registros.csv
 ```
 
-Usar o ZIP de exemplo como fonte de enderecos:
+Usar o ZIP de exemplo como fonte de endereços:
 
 ```bash
-python gerador_de_dados.py --quantity 1000 --addresses temp_dataframe.zip --output output/registros_com_endereco.csv
+python main.py --quantity 1000 --addresses temp_dataframe.zip --output output/registros_com_endereco.csv
 ```
 
-Gerar resultado reprodutivel com seed:
+Gerar resultado reprodutível com seed:
 
 ```bash
-python gerador_de_dados.py --quantity 100 --seed 42
+python main.py --quantity 100 --seed 42
 ```
 
-Ver todas as opcoes:
+Ver todas as opções:
 
 ```bash
-python gerador_de_dados.py --help
+python main.py --help
 ```
 
 ## Dataset de exemplo
 
-O arquivo `temp_dataframe.zip` contem um CSV de exemplo (`temp_dataframe.csv`) com a estrutura final esperada. O gerador consegue ler CSV diretamente ou um ZIP que contenha um CSV com as colunas de endereco:
+O arquivo `temp_dataframe.zip` contém um CSV de exemplo (`temp_dataframe.csv`) com a estrutura final esperada. O gerador consegue ler CSV diretamente ou um ZIP que contenha um CSV com as colunas de endereço:
 
 ```text
 LOGRADOURO;NUMERO;COMPLEMENTO;BAIRRO;MUNICIPIO;UF;CEP
 ```
 
-Se nenhum arquivo de enderecos for informado, os campos de endereco continuam no CSV, mas ficam vazios. Isso preserva o schema final e facilita integracoes.
+Se nenhum arquivo de endereços for informado, os campos de endereço continuam no CSV, mas ficam vazios. Isso preserva o schema final e facilita integrações.
 
-## Principais melhorias da organizacao
+## Principais melhorias da organização
 
-- Separacao do codigo em modulos pequenos e reutilizaveis.
-- CLI com argumentos para quantidade, saida, enderecos e seed.
-- Escrita em streaming, sem guardar todos os registros em memoria.
-- `requirements.txt` valido para instalacao local.
-- `pyproject.toml` com metadados do pacote e comando `e-saude` para instalacao futura.
+- Separação do código em módulos pequenos e reutilizáveis.
+- CLI com argumentos para quantidade, saída, endereços e seed.
+- Escrita em streaming, sem guardar todos os registros em memória.
+- `requirements.txt` válido para instalação local.
+- `pyproject.toml` com metadados do pacote e comando `e-saude` para instalação futura.
 - `.gitignore` para evitar versionar ambientes virtuais, caches e CSVs gerados.
 
 ## Privacidade e LGPD
 
-Este projeto nao utiliza dados pessoais reais para nomes, documentos ou vinculos familiares. Ainda assim, qualquer adaptacao com dados reais deve observar a LGPD e boas praticas de seguranca, governanca e protecao de dados.
+Este projeto não utiliza dados pessoais reais para nomes, documentos ou vínculos familiares. Ainda assim, qualquer adaptação com dados reais deve observar a LGPD e boas práticas de segurança, governança e proteção de dados.
 
-## Contexto academico
+## Contexto acadêmico
 
-Projeto desenvolvido como Trabalho de Conclusao de Curso da Pos-graduacao em Banco de Dados com Big Data, com foco no estudo de geracao de dados sinteticos para sistemas de informacao, especialmente no contexto da saude.
+Projeto desenvolvido como Trabalho de Conclusão de Curso da Pós-graduação em Banco de Dados com Big Data, com foco no estudo de geração de dados sintéticos para sistemas de informação, especialmente no contexto da saúde.
 
 ## Autores
 
-Criado por Fabio Monice e Eliana Mendes. Orientacao: Professor Iwens Sene.
+Criado por Fábio Monice e Eliana Mendes. Orientação: Professor Iwens Sene.
