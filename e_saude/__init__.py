@@ -1,6 +1,3 @@
-"""Gerador de dados sinteticos para estudos em sistemas de saude."""
+﻿"""Gerador de dados sintéticos para estudos em sistemas de saúde."""
 
-from .config import GenerationConfig
-from .generator import generate_records
-
-__all__ = ["GenerationConfig", "generate_records"]
+__all__ = []

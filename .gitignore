@@ -30,3 +30,6 @@ data/generated/
 # Sistemas operacionais
 Thumbs.db
 .DS_Store
+
+# Cache de dados públicos baixados
+data/enderecos_elasticnes.csv

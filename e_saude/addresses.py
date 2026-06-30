@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import csv
 import random
@@ -7,6 +7,8 @@ from collections.abc import Iterator
 from pathlib import Path
 from typing import TextIO
 
+from faker import Faker
+
 from .schema import ADDRESS_FIELDS
 
 
@@ -14,7 +16,7 @@ EMPTY_ADDRESS = {field: "" for field in ADDRESS_FIELDS}
 
 
 class AddressProvider:
-    """Fornece enderecos a partir de CSV comum ou CSV dentro de ZIP."""
+    """Fornece endereços a partir de CSV comum ou CSV dentro de ZIP."""
 
     def __init__(
         self,
@@ -46,7 +48,7 @@ class AddressProvider:
                 yield from self._read_csv(file)
         else:
             raise ValueError(
-                f"Formato de endereco nao suportado: {self.path}. Use .csv ou .zip."
+                f"Formato de endereço não suportado: {self.path}. Use .csv ou .zip."
             )
 
     def _load_zip(self, path: Path) -> Iterator[dict[str, str]]:
@@ -62,3 +64,24 @@ class AddressProvider:
         reader = csv.DictReader(rows, delimiter=self.delimiter)
         for row in reader:
             yield {field: (row.get(field) or "") for field in ADDRESS_FIELDS}
+
+
+class FakerAddressProvider:
+    """Gera endereços sintéticos quando não houver base pública/cache."""
+
+    def __init__(self, locale: str = "pt_BR", seed: int | None = None) -> None:
+        self.fake = Faker([locale])
+        self.random = random.Random(seed)
+        if seed is not None:
+            self.fake.seed_instance(seed)
+
+    def get(self) -> dict[str, str]:
+        return {
+            "LOGRADOURO": self.fake.street_name(),
+            "NUMERO": str(self.random.randint(1, 9999)),
+            "COMPLEMENTO": self.random.choice(["N/A", "Casa", "Apto 101", "Bloco A"]),
+            "BAIRRO": self.fake.bairro(),
+            "MUNICIPIO": self.fake.city(),
+            "UF": self.fake.estado_sigla(),
+            "CEP": self.fake.postcode(),
+        }

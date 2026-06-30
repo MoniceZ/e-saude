@@ -20,22 +20,22 @@ O CSV final segue o schema observado no `temp_dataframe.zip`:
 | Data de Nascimento Pai | Data no formato `dd/mm/aaaa` |
 | Mãe | Nome sintético da mãe |
 | Data de Nascimento Mãe | Data no formato `dd/mm/aaaa` |
-| LOGRADOURO, NUMERO, COMPLEMENTO, BAIRRO, MUNICIPIO, UF, CEP | Campos de endereço, quando uma base de endereços é informada |
+| LOGRADOURO, NUMERO, COMPLEMENTO, BAIRRO, MUNICIPIO, UF, CEP | Campos de endereço, quando uma fonte de endereços é informada |
 
 ## Estrutura
 
 ```text
 e_saude/
-  addresses.py    # Leitura de endereços de CSV ou ZIP
+  addresses.py    # Leitura e geração de endereços
   cli.py          # Interface de linha de comando
   config.py       # Configurações da geração
+  elasticnes.py   # Download/cache de endereços públicos do ElastiCNES
   exporters.py    # Escrita do CSV
   generator.py    # Orquestração dos registros
   people.py       # Geração de pessoas, documentos e família
   schema.py       # Ordem oficial das colunas
 main.py            # Entrada principal da aplicação
 requirements.txt
-requerimentos.txt
 pyproject.toml
 ```
 
@@ -48,8 +48,6 @@ python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 ```
-
-O arquivo `requerimentos.txt` foi mantido por compatibilidade, mas agora também contém apenas dependências instaláveis pelo `pip`.
 
 ## Como executar
 
@@ -65,7 +63,13 @@ Gerar uma quantidade específica:
 python main.py --quantity 10000 --output output/registros.csv
 ```
 
-Usar o ZIP de exemplo como fonte de endereços:
+Gerar endereços sintéticos com Faker:
+
+```bash
+python main.py --quantity 1000 --address-source faker --output output/registros_com_endereco.csv
+```
+
+Usar um CSV ou ZIP local como fonte de endereços:
 
 ```bash
 python main.py --quantity 1000 --addresses temp_dataframe.zip --output output/registros_com_endereco.csv
@@ -83,6 +87,34 @@ Ver todas as opções:
 python main.py --help
 ```
 
+## Endereços via ElastiCNES
+
+O projeto possui um comando para baixar endereços públicos do ElastiCNES (`https://elasticnes.saude.gov.br/`) e salvar um cache CSV local. A geração usa esse cache depois, sem depender da internet a cada execução.
+
+Baixar uma amostra padrão:
+
+```bash
+python main.py baixar-enderecos --limit 1000
+```
+
+Baixar por UF:
+
+```bash
+python main.py baixar-enderecos --uf SP --limit 10000 --output data/enderecos_elasticnes.csv
+```
+
+Gerar dados usando o cache baixado:
+
+```bash
+python main.py --quantity 1000 --addresses data/enderecos_elasticnes.csv --output output/registros.csv
+```
+
+Observações:
+
+- O cache é ignorado pelo Git para evitar versionar dados baixados.
+- A fonte pública pode mudar URL, payload ou disponibilidade; por isso o cache local é o caminho mais estável.
+- Os dados pessoais continuam sendo sintéticos. O ElastiCNES é usado apenas como apoio para campos públicos de endereço de estabelecimentos.
+
 ## Dataset de exemplo
 
 O arquivo `temp_dataframe.zip` contém um CSV de exemplo (`temp_dataframe.csv`) com a estrutura final esperada. O gerador consegue ler CSV diretamente ou um ZIP que contenha um CSV com as colunas de endereço:
@@ -97,6 +129,7 @@ Se nenhum arquivo de endereços for informado, os campos de endereço continuam 
 
 - Separação do código em módulos pequenos e reutilizáveis.
 - CLI com argumentos para quantidade, saída, endereços e seed.
+- Comando específico para baixar/cachear endereços públicos do ElastiCNES.
 - Escrita em streaming, sem guardar todos os registros em memória.
 - `requirements.txt` válido para instalação local.
 - `pyproject.toml` com metadados do pacote e comando `e-saude` para instalação futura.
