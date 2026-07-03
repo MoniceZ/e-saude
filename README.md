@@ -237,7 +237,7 @@ O uso deste projeto não substitui avaliações jurídicas, técnicas ou de segu
 
 ## Melhorias futuras
 
-- Refatorar e ampliar a estrutura modular do projeto.
+- ~~Refatorar e ampliar a estrutura modular do projeto.~~
 - Criar documentação técnica das funções.
 - Adicionar testes automatizados.
 - Permitir exportação em diferentes formatos, como JSON e Excel.
@@ -292,3 +292,4 @@ Orientado por:
 Este projeto representa uma etapa de aprendizado e aplicação prática de conceitos relacionados a desenvolvimento, banco de dados, Big Data e geração de datasets sintéticos.
 
 Melhorias, comentários e sugestões são bem-vindos.
+
