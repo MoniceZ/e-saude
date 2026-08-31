@@ -280,7 +280,6 @@ O projeto não possui finalidade comercial, não deve ser utilizado como ferrame
 Criado por:
 
 - Fábio Monice
-- MONICE, F. J. C.
 - Eliana Mendes
 
 Orientado por:
