@@ -263,11 +263,11 @@ Algumas formas de contribuição incluem:
 
 ## Licença
 
-Este projeto pode ser utilizado para fins acadêmicos, educacionais e de estudo.
+Este projeto está licenciado sob a Licença MIT No Attribution (MIT-0).
 
-Recomenda-se utilizar uma licença aberta, como a MIT License, caso o objetivo seja permitir que outras pessoas usem, modifiquem e contribuam com o projeto.
+A licença MIT-0 permite uso, cópia, modificação, fusão, publicação, distribuição, sublicenciamento e venda do software, sem a exigência de atribuição, mantendo a mesma liberdade de uso de software aberto e adequada a fins acadêmicos, educacionais e de estudo.
 
-Caso utilize a licença MIT, recomenda-se criar um arquivo separado chamado `LICENSE` na raiz do repositório contendo o texto completo da licença.
+O texto completo da licença está disponível no arquivo `LICENSE` na raiz deste repositório.
 
 ## Declaração de finalidade
 
